@@ -18,4 +18,7 @@
     <string name="One">1</string>
     <string name="Two">2</string>
     <string name="Three">3</string>
+    <string name="Zero">0</string>
+    <string name="Equals">=</string>
+    <string name="Colon">.</string>
 </resources>
