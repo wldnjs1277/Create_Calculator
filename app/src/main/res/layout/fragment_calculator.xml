@@ -146,8 +146,11 @@
 
                 <Button
                     android:id="@+id/Zero_btn"
-                    style="@style/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
                     android:layout_span="2"
+                    style="@style/button"
                     android:gravity="left"
                     android:text="@string/Zero" />
 
