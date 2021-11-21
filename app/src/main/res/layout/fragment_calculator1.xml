@@ -32,6 +32,7 @@
             <Button
                 android:id="@+id/AC_btn"
                 style="@style/button"
+                android:background="@drawable/button_color"
                 android:text="@string/AC" />
 
             <Button
