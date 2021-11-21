@@ -7,7 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="gray">#9A9898</color>
-    <color name="deep_gray">#575656</color>
+    <color name="gray">#FCC5C3C3</color>
+    <color name="deep_gray">#4A4A4A</color>
     <color name="orange">#FF9800</color>
+    <color name="click_gray">#FCCCCBCB</color>
+    <color name="click_deep_gray">#7C7A7A</color>
+    <color name="click_orange">#F8EBD9</color>
 </resources>

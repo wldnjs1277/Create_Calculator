@@ -157,7 +157,7 @@
 
             <Button
                 android:id="@+id/Zero_btn"
-                android:background="@drawable/deep_gray_color"
+                android:background="@drawable/zero_button"
                 style="@style/zero_button"
                 android:text="@string/Zero" />
 

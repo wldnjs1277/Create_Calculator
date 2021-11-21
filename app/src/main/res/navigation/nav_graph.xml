@@ -6,11 +6,6 @@
     app:startDestination="@id/calculator1">
 
     <fragment
-        android:id="@+id/calculatorFragment"
-        android:name="com.example.calculator.calculatorFragment"
-        android:label="fragment_calculator"
-        tools:layout="@layout/fragment_calculator" />
-    <fragment
         android:id="@+id/calculator1"
         android:name="com.example.calculator.calculator1"
         android:label="fragment_calculator1"
