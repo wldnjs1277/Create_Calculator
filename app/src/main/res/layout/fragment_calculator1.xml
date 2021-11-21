@@ -12,17 +12,13 @@
         android:weightSum="10">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:gravity="bottom|right"
-            android:text="TextView"
-            android:textSize="30sp"
-            android:textColor="@color/white"
-            tools:ignore="RtlHardcoded" />
+            android:id="@+id/textView"
+            style="@style/textview"
+            android:text="textview"
+            android:layout_marginBottom="20dp"/>
 
         <LinearLayout
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -30,29 +26,33 @@
             android:weightSum="4">
 
             <Button
+
                 android:id="@+id/AC_btn"
-                style="@style/button"
+                style="@style/gray_button"
                 android:background="@drawable/button_color"
                 android:text="@string/AC" />
 
             <Button
                 android:id="@+id/P_M_btn"
-                style="@style/button"
+                style="@style/gray_button"
+                android:background="@drawable/button_color"
                 android:text="@string/P_M" />
 
             <Button
                 android:id="@+id/percent"
-                style="@style/button"
+                style="@style/gray_button"
+                android:background="@drawable/button_color"
                 android:text="@string/Percent" />
 
             <Button
                 android:id="@+id/Dvison_btn"
-                style="@style/button"
-
+                style="@style/orange_button"
+                android:background="@drawable/orange_color"
                 android:text="@string/Divison" />
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,26 +60,31 @@
 
             <Button
                 android:id="@+id/Seven_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Seven" />
 
             <Button
                 android:id="@+id/Eight_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Eight" />
 
             <Button
                 android:id="@+id/Nine_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Nine" />
 
             <Button
                 android:id="@+id/Multiplicaton"
-                style="@style/button"
+                style="@style/orange_button"
+                android:background="@drawable/orange_color"
                 android:text="@string/Multiplication" />
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -87,26 +92,31 @@
 
             <Button
                 android:id="@+id/Four_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Four" />
 
             <Button
                 android:id="@+id/Five_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Five" />
 
             <Button
                 android:id="@+id/Six_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Six" />
 
             <Button
                 android:id="@+id/Minus_btn"
-                style="@style/button"
+                style="@style/orange_button"
+                android:background="@drawable/orange_color"
                 android:text="@string/Minus" />
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -114,26 +124,31 @@
 
             <Button
                 android:id="@+id/One_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/One" />
 
             <Button
                 android:id="@+id/Two_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Two" />
 
             <Button
                 android:id="@+id/Three_btn"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Three" />
 
             <Button
                 android:id="@+id/Plus_btn"
-                style="@style/button"
+                style="@style/orange_button"
+                android:background="@drawable/orange_color"
                 android:text="@string/Plus" />
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -142,20 +157,20 @@
 
             <Button
                 android:id="@+id/Zero_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:layout_weight="4"
+                android:background="@drawable/deep_gray_color"
+                style="@style/zero_button"
                 android:text="@string/Zero" />
 
             <Button
                 android:id="@+id/Colon"
-                style="@style/button"
+                style="@style/deep_gray_button"
+                android:background="@drawable/deep_gray_color"
                 android:text="@string/Colon" />
 
             <Button
                 android:id="@+id/Equals"
-                style="@style/button"
+                style="@style/orange_button"
+                android:background="@drawable/orange_color"
                 android:text="@string/Equals" />
         </LinearLayout>
     </LinearLayout>
