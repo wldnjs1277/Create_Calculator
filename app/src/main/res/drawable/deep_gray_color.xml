@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    진한회색버튼 클릭되엇을때 안되엇을때 -->
     <item android:state_pressed="false">
         <shape android:shape="oval">
             <solid android:color="@color/deep_gray" />
@@ -13,3 +14,4 @@
         </shape>
     </item>
 </selector>
+<!---->
