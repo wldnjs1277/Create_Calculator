@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<!--    버튼색깔별 레이아웃 스타일-->
+<!--    버튼색깔별 레이아웃 스타일
+        shape을 oval로 줘서 버튼을 둥글게 만들려 했으나 타원형 모양이 나와서
+        버튼모양을 둥글게 만들려면 weight 와 width 가 같아야 한다는 설명을 보고
+        button들의 height와width에 값을 다 지정해주어 모양을 동그랗게 만듬-->
     <style name="textview">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
