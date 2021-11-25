@@ -1,15 +1,13 @@
 package com.example.calculator
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.fragment_calculator1.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,18 +40,35 @@ class calculator1 : Fragment(),View.OnClickListener {
         return inflater.inflate(R.layout.fragment_calculator1, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-    }
+        Zero_btn.setOnClickListener(this)
+        One_btn.setOnClickListener(this)
+        Two_btn.setOnClickListener(this)
+        Three_btn.setOnClickListener(this)
+        Four_btn.setOnClickListener(this)
+        Five_btn.setOnClickListener(this)
+        Six_btn.setOnClickListener(this)
+        Seven_btn.setOnClickListener(this)
+        Eight_btn.setOnClickListener(this)
+        Nine_btn.setOnClickListener(this)
 
+        Plus_btn.setOnClickListener(this)
+        Minus_btn.setOnClickListener(this)
+        P_M_btn.setOnClickListener(this)
+        Multiplicaton.setOnClickListener(this)
+        Dvison_btn.setOnClickListener(this)
+        AC_btn.setOnClickListener(this)
+        percent.setOnClickListener(this)
+        Equals.setOnClickListener(this)
+    }
 
     override fun onClick(p0: View?) {
         when(p0?.id)
         {
             R.id.Zero_btn ->{
-
+                textView.text= /*입력되더있는 데이터 가져오기+*/ "0"
             }
             R.id.One_btn ->{
 
@@ -84,6 +99,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             }
             R.id.AC_btn ->{
 
+                textView.text ="0"
             }
             R.id.Dvison_btn ->{
 
