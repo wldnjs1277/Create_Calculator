@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_calculator1.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -62,40 +60,83 @@ class calculator1 : Fragment(),View.OnClickListener {
         AC_btn.setOnClickListener(this)
         percent.setOnClickListener(this)
         Equals.setOnClickListener(this)
+
+
     }
 
     override fun onClick(p0: View?) {
+        var result = textView.findViewById<View>(R.id.textView)
         when(p0?.id)
         {
             R.id.Zero_btn ->{
-                textView.text= /*입력되더있는 데이터 가져오기+*/ "0"
+                if (textView.text=="0"){
+                    textView.text = "0"
+                } else{
+                    //textView.append(result+"0")
+                }
             }
             R.id.One_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "1"
+                } else{
 
+                }
             }
             R.id.Two_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "2"
+                } else{
 
+                }
             }
             R.id.Three_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "3"
+                } else{
 
+                }
             }
             R.id.Four_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "4"
+                } else{
 
+                }
             }
             R.id.Five_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "5"
+                } else{
 
+                }
             }
             R.id.Six_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "6"
+                } else{
 
+                }
             }
             R.id.Seven_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "7"
+                } else{
 
+                }
             }
             R.id.Eight_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "8"
+                } else{
 
+                }
             }
             R.id.Nine_btn ->{
+                if (textView.text=="0"){
+                    textView.text = "9"
+                } else{
 
+                }
             }
             R.id.AC_btn ->{
 
