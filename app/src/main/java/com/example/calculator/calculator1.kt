@@ -65,77 +65,77 @@ class calculator1 : Fragment(),View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        var result = textView.findViewById<View>(R.id.textView)
+        var Text = textView.text.toString()
         when(p0?.id)
         {
             R.id.Zero_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "0"
-                } else{
-                    //textView.append(result+"0")
+                }else{
+                    textView.append("0")
                 }
             }
             R.id.One_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "1"
                 } else{
-
+                    textView.append("1")
                 }
             }
             R.id.Two_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "2"
                 } else{
-
+                    textView.append("2")
                 }
             }
             R.id.Three_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "3"
                 } else{
-
+                    textView.append("3")
                 }
             }
             R.id.Four_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "4"
                 } else{
-
+                    textView.append("4")
                 }
             }
             R.id.Five_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "5"
                 } else{
-
+                    textView.append("5")
                 }
             }
             R.id.Six_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "6"
                 } else{
-
+                    textView.append("6")
                 }
             }
             R.id.Seven_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "7"
                 } else{
-
+                    textView.append("7")
                 }
             }
             R.id.Eight_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "8"
                 } else{
-
+                    textView.append("8")
                 }
             }
             R.id.Nine_btn ->{
-                if (textView.text=="0"){
+                if (Text=="0"){
                     textView.text = "9"
                 } else{
-
+                    textView.append("9")
                 }
             }
             R.id.AC_btn ->{
