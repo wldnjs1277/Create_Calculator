@@ -6,13 +6,20 @@
         버튼모양을 둥글게 만들려면 weight 와 width 가 같아야 한다는 설명을 보고
         button들의 height와width에 값을 다 지정해주어 모양을 동그랗게 만듬-->
     <style name="textview">
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:layout_weight">10</item>
         <item name="android:textSize">50sp</item>
         <item name="android:gravity">bottom|right</item>
-       <item name="android:text">"0"</item>
+        <item name="android:text">"0"</item>
+    </style>
+    <style name="textView2">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:gravity">bottom|right</item>
+        <item name="android:text">"0"</item>
     </style>
     <style name="orange_button">
         <item name="android:layout_marginStart">10dp</item>
