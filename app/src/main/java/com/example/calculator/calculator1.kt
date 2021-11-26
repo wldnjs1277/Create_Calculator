@@ -158,7 +158,12 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.percent ->{
-
+                if (Text=="0"){
+                    textView.text = "0"
+                } else{
+                   var Pe=(Text.toDouble()/100).toString()
+                    textView.text=Pe
+                }
             }
             R.id.Equals ->{
 
