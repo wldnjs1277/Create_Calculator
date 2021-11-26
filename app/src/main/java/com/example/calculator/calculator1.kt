@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_calculator1.*
+import org.w3c.dom.Text
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,30 +63,42 @@ class calculator1 : Fragment(),View.OnClickListener {
         percent.setOnClickListener(this)
         Equals.setOnClickListener(this)
 
+        if (textView.text=="0"){
+            AC_btn.text="AC"
+        }else{
+            AC_btn.text="c"
+        }
+
 
     }
 
     override fun onClick(p0: View?) {
         var Text = textView.text.toString()
+        var Text_D =Text.toDouble()
         when(p0?.id)
         {
             R.id.Zero_btn ->{
                 if (Text=="0"){
                     textView.text = "0"
+                    AC_btn.text="AC"
                 }else{
                     textView.append("0")
+                    AC_btn.text="C"
                 }
             }
             R.id.One_btn ->{
                 if (Text=="0"){
                     textView.text = "1"
+                    AC_btn.text="C"
                 } else{
                     textView.append("1")
+
                 }
             }
             R.id.Two_btn ->{
                 if (Text=="0"){
                     textView.text = "2"
+                    AC_btn.text="C"
                 } else{
                     textView.append("2")
                 }
@@ -92,6 +106,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             R.id.Three_btn ->{
                 if (Text=="0"){
                     textView.text = "3"
+                    AC_btn.text="C"
                 } else{
                     textView.append("3")
                 }
@@ -99,6 +114,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             R.id.Four_btn ->{
                 if (Text=="0"){
                     textView.text = "4"
+                    AC_btn.text="C"
                 } else{
                     textView.append("4")
                 }
@@ -106,6 +122,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             R.id.Five_btn ->{
                 if (Text=="0"){
                     textView.text = "5"
+                    AC_btn.text="C"
                 } else{
                     textView.append("5")
                 }
@@ -113,6 +130,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             R.id.Six_btn ->{
                 if (Text=="0"){
                     textView.text = "6"
+                    AC_btn.text="C"
                 } else{
                     textView.append("6")
                 }
@@ -120,6 +138,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             R.id.Seven_btn ->{
                 if (Text=="0"){
                     textView.text = "7"
+                    AC_btn.text="C"
                 } else{
                     textView.append("7")
                 }
@@ -127,6 +146,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             R.id.Eight_btn ->{
                 if (Text=="0"){
                     textView.text = "8"
+                    AC_btn.text="C"
                 } else{
                     textView.append("8")
                 }
@@ -134,13 +154,17 @@ class calculator1 : Fragment(),View.OnClickListener {
             R.id.Nine_btn ->{
                 if (Text=="0"){
                     textView.text = "9"
+                    AC_btn.text="C"
                 } else{
                     textView.append("9")
                 }
             }
             R.id.AC_btn ->{
-
-                textView.text ="0"
+                textView.text = "0"
+                if (AC_btn.text.equals("C")) {
+                    AC_btn.text = "AC"
+                    textView.text = "0"
+                }
             }
             R.id.Dvison_btn ->{
 
@@ -153,6 +177,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             }
             R.id.Plus_btn ->{
 
+
             }
             R.id.Minus_btn ->{
 
@@ -161,7 +186,7 @@ class calculator1 : Fragment(),View.OnClickListener {
                 if (Text=="0"){
                     textView.text = "0"
                 } else{
-                   var Pe=(Text.toDouble()/100).toString()
+                   var Pe=(Text_D/100).toString()
                     textView.text=Pe
                 }
             }
