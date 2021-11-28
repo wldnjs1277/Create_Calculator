@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_calculator1.*
 import org.w3c.dom.Text
@@ -42,7 +43,7 @@ class calculator1 : Fragment(),View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+//숫자버튼
         Zero_btn.setOnClickListener(this)
         One_btn.setOnClickListener(this)
         Two_btn.setOnClickListener(this)
@@ -53,7 +54,7 @@ class calculator1 : Fragment(),View.OnClickListener {
         Seven_btn.setOnClickListener(this)
         Eight_btn.setOnClickListener(this)
         Nine_btn.setOnClickListener(this)
-
+//연산 버튼
         Plus_btn.setOnClickListener(this)
         Minus_btn.setOnClickListener(this)
         P_M_btn.setOnClickListener(this)
@@ -65,7 +66,7 @@ class calculator1 : Fragment(),View.OnClickListener {
         Equals.setOnClickListener(this)
 
         if (textView.text=="0"){
-            AC_btn.text="AC"
+            AC_btn.text=getString(R.string.AC)
         }else{
             AC_btn.text="c"
         }
@@ -74,14 +75,14 @@ class calculator1 : Fragment(),View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        var Text = textView.text.toString()
-        var Text_D =Text.toDouble()
+        val Text: String = textView.text.toString()
+        val Text_D =Text.toDouble()
         when(p0?.id)
         {
             R.id.Zero_btn ->{
                 if (Text=="0"){
                     textView.text = "0"
-                    AC_btn.text="AC"
+                    AC_btn.text=getString(R.string.AC)
                 }else{
                     textView.append("0")
                     AC_btn.text="C"
@@ -163,7 +164,7 @@ class calculator1 : Fragment(),View.OnClickListener {
             R.id.AC_btn ->{
                 textView.text = "0"
                 if (AC_btn.text.equals("C")) {
-                    AC_btn.text = "AC"
+                    AC_btn.text = getText(R.string.AC)
                     textView.text = "0"
                 }
             }
@@ -174,6 +175,12 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.P_M_btn ->{
+                //하는중
+                if(textView.text.contains(getString(R.string.Minus))){
+                    Text.replace(getString(R.string.Minus),"")
+                }else{
+                    textView.text ="-"+Text
+                }
 
             }
             R.id.Plus_btn ->{
@@ -187,8 +194,8 @@ class calculator1 : Fragment(),View.OnClickListener {
                 if (Text=="0"){
                     textView.text = "0"
                 } else{
-                   val Pe=(Text_D/100).toString()
-                    textView.text=Pe
+                   val pe=(Text_D/100).toString()
+                    textView.text=pe
                 }
             }
             R.id.Decimal_point ->{
