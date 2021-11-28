@@ -30,7 +30,7 @@
                 style="@style/textview"
                 android:layout_marginBottom="20dp"
                 android:paddingEnd="45dp"
-                android:text="0"/>
+                android:text=""/>
 
         </FrameLayout>
 
@@ -178,7 +178,7 @@
                 android:text="@string/Zero" />
 
             <Button
-                android:id="@+id/Colon"
+                android:id="@+id/Decimal_point"
                 style="@style/deep_gray_button"
                 android:background="@drawable/deep_gray_color"
                 android:text="@string/Colon" />

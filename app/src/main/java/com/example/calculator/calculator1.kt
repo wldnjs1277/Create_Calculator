@@ -61,6 +61,7 @@ class calculator1 : Fragment(),View.OnClickListener {
         Dvison_btn.setOnClickListener(this)
         AC_btn.setOnClickListener(this)
         percent.setOnClickListener(this)
+        Decimal_point.setOnClickListener(this)
         Equals.setOnClickListener(this)
 
         if (textView.text=="0"){
@@ -186,9 +187,16 @@ class calculator1 : Fragment(),View.OnClickListener {
                 if (Text=="0"){
                     textView.text = "0"
                 } else{
-                   var Pe=(Text_D/100).toString()
+                   val Pe=(Text_D/100).toString()
                     textView.text=Pe
                 }
+            }
+            R.id.Decimal_point ->{
+               if(Text.contains(".")){
+                return
+               }else{
+                   textView.append(".")
+               }
             }
             R.id.Equals ->{
 
