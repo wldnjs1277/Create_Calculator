@@ -184,7 +184,12 @@ class calculator1 : Fragment(),View.OnClickListener {
                        textView.text= (Text.toInt()*-1).toString()
                    }
                 }else{
+                    if(Text=="0"){
+                        textView.text="0"
+                    }
+                    else{
                     textView.text ="-"+Text
+                    }
                 }
 
             }
