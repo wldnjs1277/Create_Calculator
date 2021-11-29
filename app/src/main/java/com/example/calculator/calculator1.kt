@@ -175,9 +175,14 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.P_M_btn ->{
-                //하는중
+                //string으로 만들어서 "-"을 때는걸 구현하는 방법을 생각했으나 예제를 봐도 잘 모르겠어서
+                //할수있는 방법으로 구현
                 if(textView.text.contains(getString(R.string.Minus))){
-                    Text.replace(getString(R.string.Minus),"")
+                   if (textView.text.contains(".")){
+                       textView.text = (Text_D *-1).toString()
+                   }else{
+                       textView.text= (Text.toInt()*-1).toString()
+                   }
                 }else{
                     textView.text ="-"+Text
                 }
