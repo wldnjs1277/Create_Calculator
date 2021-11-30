@@ -4,11 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_calculator1.*
-import org.w3c.dom.Text
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -64,19 +62,12 @@ class calculator1 : Fragment(),View.OnClickListener {
         percent.setOnClickListener(this)
         Decimal_point.setOnClickListener(this)
         Equals.setOnClickListener(this)
-
-        if (textView.text=="0"){
-            AC_btn.text=getString(R.string.AC)
-        }else{
-            AC_btn.text="c"
-        }
-
-
     }
 
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
+
         when(p0?.id)
         {
             R.id.Zero_btn ->{
@@ -167,6 +158,7 @@ class calculator1 : Fragment(),View.OnClickListener {
                     AC_btn.text = getText(R.string.AC)
                     textView.text = "0"
                 }
+
             }
             R.id.Dvison_btn ->{
 
@@ -175,8 +167,6 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.P_M_btn ->{
-                //string으로 만들어서 "-"을 때는걸 구현하는 방법을 생각했으나 예제를 봐도 잘 모르겠어서
-                //할수있는 방법으로 구현
                 if(textView.text.contains(getString(R.string.Minus))){
                    if (textView.text.contains(".")){
                        textView.text = (Text_D *-1).toString()
@@ -195,7 +185,15 @@ class calculator1 : Fragment(),View.OnClickListener {
             }
             R.id.Plus_btn ->{
 
+                if(Text=="0"){
+                    return
+                }else {
+                    if (Text.contains(".")) {
 
+                    } else {
+
+                    }
+                }
             }
             R.id.Minus_btn ->{
 
@@ -213,6 +211,7 @@ class calculator1 : Fragment(),View.OnClickListener {
                 return
                }else{
                    textView.append(".")
+                   AC_btn.text="C"
                }
             }
             R.id.Equals ->{
