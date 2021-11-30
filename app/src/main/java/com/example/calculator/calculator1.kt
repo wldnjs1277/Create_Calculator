@@ -62,12 +62,14 @@ class calculator1 : Fragment(),View.OnClickListener {
         percent.setOnClickListener(this)
         Decimal_point.setOnClickListener(this)
         Equals.setOnClickListener(this)
+        //
+
     }
 
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
-
+        var add = false
         when(p0?.id)
         {
             R.id.Zero_btn ->{
@@ -184,14 +186,19 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.Plus_btn ->{
-
+//버튼을 눌럿을때 숫자 사리지는 걸 어떻게 처리해야 할지 모르겠고 버튼을 한번더 눌럿을때 어떻게 해야할지 고민
                 if(Text=="0"){
                     return
                 }else {
                     if (Text.contains(".")) {
+                        add=true
 
                     } else {
+                        add=true
 
+                    }
+                    if(add==true){
+                        //앞에값=앞에값+뒤에입력받은값
                     }
                 }
             }
