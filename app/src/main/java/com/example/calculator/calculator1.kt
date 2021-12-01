@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_calculator1.*
+import java.text.DecimalFormat
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -69,16 +71,18 @@ class calculator1 : Fragment(),View.OnClickListener {
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
-        var add = false
+        val dec = DecimalFormat("#,###")//숫자 단위표기를위한
         when(p0?.id)
         {
             R.id.Zero_btn ->{
                 if (Text=="0"){
                     textView.text = "0"
-                    AC_btn.text=getString(R.string.AC)
+                   AC_btn.text=getString(R.string.AC)
+
                 }else{
-                    textView.append("0")
+                   textView.append("0")
                     AC_btn.text="C"
+
                 }
             }
             R.id.One_btn ->{
@@ -87,7 +91,6 @@ class calculator1 : Fragment(),View.OnClickListener {
                     AC_btn.text="C"
                 } else{
                     textView.append("1")
-
                 }
             }
             R.id.Two_btn ->{
@@ -187,21 +190,9 @@ class calculator1 : Fragment(),View.OnClickListener {
             }
             R.id.Plus_btn ->{
 //버튼을 눌럿을때 숫자 사리지는 걸 어떻게 처리해야 할지 모르겠고 버튼을 한번더 눌럿을때 어떻게 해야할지 고민
-                if(Text=="0"){
-                    return
-                }else {
-                    if (Text.contains(".")) {
-                        add=true
 
-                    } else {
-                        add=true
-
-                    }
-                    if(add==true){
-                        //앞에값=앞에값+뒤에입력받은값
-                    }
                 }
-            }
+
             R.id.Minus_btn ->{
 
             }
