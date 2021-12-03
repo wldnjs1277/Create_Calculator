@@ -14,7 +14,7 @@ fun postfix(input:String){
     for(i in 0 until input.length){
         when(input[i].toString()){
             "(" -> {stack.push("(")}
-            ")" ->{if(stack.isEmpty()==false){
+            ")" ->{if(!stack.isEmpty()){
                 result.append(stack.pop()) }
             }
             "+" -> {stack.push("+")}
