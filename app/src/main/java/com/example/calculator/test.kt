@@ -19,7 +19,8 @@ fun postfix(input:String) {
             ")" -> {
                 if (!stack.isEmpty()) {
                     for (j in 0 until stack.size) {
-                        //result.append(stack.pop())
+
+                        result.append(stack.pop())
                     }
                 }
             }
@@ -35,13 +36,17 @@ fun postfix(input:String) {
             "/" -> {
                 stack.push("/")
             }
-            else -> result.append(input[i].toString())
+            else ->{
+                if(input[i].toString().toInt() in 0..9){
+                    result.append(input[i].toString())}
+            }
         }
     }
-    for(k in 0 until stack.size){
-        result.append(stack.pop())
+    if (!stack.isEmpty()) {
+        for (k in 0 until stack.size) {
+            result.append(stack.pop())
+        }
     }
-
 
     println(result)
 }
