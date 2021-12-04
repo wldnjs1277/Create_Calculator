@@ -5,7 +5,7 @@ import java.util.*
 
 
 fun main(){
-postfix("(3+4)*(1-2)")
+postfix("(3+4)*(1-2)+1")
 }
 //만드는중
 fun postfix(input:String) {
@@ -14,7 +14,8 @@ fun postfix(input:String) {
     for (i in 0 until input.length) {
         when (input[i].toString()) {
             "(" -> {
-                stack.push("(")
+                //stack.push("(")
+                input[i].toString().replace("(","")
             }
             ")" -> {
                 if (!stack.isEmpty()) {
@@ -47,7 +48,6 @@ fun postfix(input:String) {
             result.append(stack.pop())
         }
     }
-
     println(result)
 }
 
