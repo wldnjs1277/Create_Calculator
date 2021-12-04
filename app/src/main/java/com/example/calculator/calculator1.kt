@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_calculator1.*
 import java.text.DecimalFormat
@@ -190,6 +189,9 @@ class calculator1 : Fragment(),View.OnClickListener {
             }
             R.id.Plus_btn ->{
 //버튼을 눌럿을때 숫자 사리지는 걸 어떻게 처리해야 할지 모르겠고 버튼을 한번더 눌럿을때 어떻게 해야할지 고민
+
+
+
 
                 }
 
