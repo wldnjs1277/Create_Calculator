@@ -5,7 +5,7 @@ import java.util.*
 
 
 fun main(){
-postfix("(3+4)*(1-2)+1")
+    postfix("(3+4)*(1-2)+1")
 }
 fun postfix(input:String) {
     var stack = Stack<String>()
@@ -13,13 +13,11 @@ fun postfix(input:String) {
     for (i in 0 until input.length) {
         when (input[i].toString()) {
             "(" -> {
-                //stack.push("(")
-                input[i].toString().replace("(","")
+                input[i].toString().replace("(", "")
             }
             ")" -> {
                 if (!stack.isEmpty()) {
                     for (j in 0 until stack.size) {
-
                         result.append(stack.pop())
                     }
                 }
@@ -36,9 +34,10 @@ fun postfix(input:String) {
             "/" -> {
                 stack.push("/")
             }
-            else ->{
-                if(input[i].toString().toInt() in 0..9){
-                    result.append(input[i].toString())}
+            else -> {
+                if (input[i].toString().toInt() in 0..9) {
+                    result.append(input[i].toString())
+                }
             }
         }
     }
