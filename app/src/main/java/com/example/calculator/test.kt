@@ -8,8 +8,8 @@ fun main(){
     postfix("(3+4)*(1-2)+1")
 }
 fun postfix(input:String) {
-    var stack = Stack<String>()
-    var result = StringBuilder()  // StringBuilder 코틀린에서 동적으로 문자열을 조작가능
+    val stack = Stack<String>()
+    val result = StringBuilder()  // StringBuilder 코틀린에서 동적으로 문자열을 조작가능
     for (i in 0 until input.length) {
         when (input[i].toString()) {
             "(" -> {
