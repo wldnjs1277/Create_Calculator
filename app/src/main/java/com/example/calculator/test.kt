@@ -6,6 +6,7 @@ import java.util.*
 
 fun main(){
     postfix("(3+4)*(1-2)+1")
+
 }
 fun postfix(input:String) {
     val stack = Stack<String>()
