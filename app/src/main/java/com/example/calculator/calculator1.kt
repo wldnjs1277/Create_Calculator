@@ -1,5 +1,4 @@
 package com.example.calculator
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +6,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_calculator1.*
 import java.text.DecimalFormat
+
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -71,6 +71,7 @@ class calculator1 : Fragment(),View.OnClickListener {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
         val dec = DecimalFormat("#,###")//숫자 단위표기를위한
+        var count = 0
         when(p0?.id)
         {
             R.id.Zero_btn ->{
@@ -157,7 +158,7 @@ class calculator1 : Fragment(),View.OnClickListener {
                 }
             }
             R.id.AC_btn ->{
-                textView.text = "0"
+
                 if (AC_btn.text.equals("C")) {
                     AC_btn.text = getText(R.string.AC)
                     textView.text = "0"
@@ -188,12 +189,8 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.Plus_btn ->{
-//버튼을 눌럿을때 숫자 사리지는 걸 어떻게 처리해야 할지 모르겠고 버튼을 한번더 눌럿을때 어떻게 해야할지 고민
 
-
-
-
-                }
+            }
 
             R.id.Minus_btn ->{
 
