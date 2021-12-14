@@ -61,7 +61,7 @@
                 android:text="@string/Percent" />
 
             <Button
-                android:id="@+id/Dvison_btn"
+                android:id="@+id/Divison_btn"
                 style="@style/orange_button"
                 android:background="@drawable/orange_color"
                 android:text="@string/Divison" />

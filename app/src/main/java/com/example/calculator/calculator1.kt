@@ -58,7 +58,7 @@ class calculator1 : Fragment(),View.OnClickListener {
         Minus_btn.setOnClickListener(this)
         P_M_btn.setOnClickListener(this)
         Multiplicaton.setOnClickListener(this)
-        Dvison_btn.setOnClickListener(this)
+        Divison_btn.setOnClickListener(this)
         AC_btn.setOnClickListener(this)
         percent.setOnClickListener(this)
         Decimal_point.setOnClickListener(this)
@@ -165,7 +165,7 @@ class calculator1 : Fragment(),View.OnClickListener {
                 }
 
             }
-            R.id.Dvison_btn ->{
+            R.id.Divison_btn ->{
 
             }
             R.id.Multiplicaton ->{
@@ -188,7 +188,10 @@ class calculator1 : Fragment(),View.OnClickListener {
                 }
 
             }
-            R.id.Plus_btn ->{
+            R.id.Plus_btn -> {
+                //+버튼을 계속눌럿을때 연산이 된 값이 나오는걸
+                //val firstinput = textView.text.toString().toInt()
+
 
             }
 
