@@ -66,12 +66,11 @@ class calculator1 : Fragment(),View.OnClickListener {
         //
 
     }
-
+    var count=0
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
         val dec = DecimalFormat("#,###")//숫자 단위표기를위한
-        var count = 0
         when(p0?.id)
         {
             R.id.Zero_btn ->{
@@ -162,6 +161,9 @@ class calculator1 : Fragment(),View.OnClickListener {
                 if (AC_btn.text.equals("C")) {
                     AC_btn.text = getText(R.string.AC)
                     textView.text = "0"
+
+                    //ac버튼을 누르면 카운트도 초기화 시키기
+                    count=0
                 }
 
             }
@@ -189,10 +191,16 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.Plus_btn -> {
-                //+버튼을 계속눌럿을때 연산이 된 값이 나오는걸
-                //val firstinput = textView.text.toString().toInt()
-
-
+                //+버튼을 처음 누를때와 그다음 누를때 다른데 그걸 count로 세고 onclick안에 count를 정의하여 count++을 사용할때는
+                //사용이 되지않아 onclick밖에 정의
+                //계속 수정하기
+                val firstinput = textView.text.toString().toInt()
+               if(count==0){
+                   textView.text="1"
+                   count++
+               }else if(count>0){
+                   textView.append(firstinput.toString())
+               }
             }
 
             R.id.Minus_btn ->{
@@ -219,7 +227,6 @@ class calculator1 : Fragment(),View.OnClickListener {
             }
         }
     }
-
 
     companion object {
         /**
