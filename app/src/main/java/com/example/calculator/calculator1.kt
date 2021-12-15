@@ -71,7 +71,6 @@ class calculator1 : Fragment(),View.OnClickListener {
     var minuscount=0
     var divisioncount =0
     var multiplecount =0
-    //val firstinput = textView.text.toString().toInt()
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
