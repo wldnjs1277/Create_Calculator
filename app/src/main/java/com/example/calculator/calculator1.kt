@@ -66,7 +66,12 @@ class calculator1 : Fragment(),View.OnClickListener {
         //
 
     }
-    var count=0
+    //버튼횟수세기
+    var pluscount=0
+    var minuscount=0
+    var divisioncount =0
+    var multiplecount =0
+    //val firstinput = textView.text.toString().toInt()
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
@@ -163,15 +168,30 @@ class calculator1 : Fragment(),View.OnClickListener {
                     textView.text = "0"
 
                     //ac버튼을 누르면 카운트도 초기화 시키기
-                    count=0
+                    if (AC_btn.text.equals("AC")) {
+                        pluscount = 0
+                        minuscount = 0
+                        divisioncount=0
+                        multiplecount=0
+                    }
                 }
 
             }
             R.id.Divison_btn ->{
-
+                if(divisioncount==0){
+                    textView.text="4"
+                    divisioncount++
+                }else if(divisioncount>0){
+                    textView.append("5")
+                }
             }
             R.id.Multiplicaton ->{
-
+                if(multiplecount==0){
+                    textView.text="6"
+                    multiplecount++
+                }else if(multiplecount>0){
+                    textView.append("7")
+                }
             }
             R.id.P_M_btn ->{
                 if(textView.text.contains(getString(R.string.Minus))){
@@ -195,16 +215,21 @@ class calculator1 : Fragment(),View.OnClickListener {
                 //사용이 되지않아 onclick밖에 정의
                 //계속 수정하기
                 val firstinput = textView.text.toString().toInt()
-               if(count==0){
+               if(pluscount==0){
                    textView.text="1"
-                   count++
-               }else if(count>0){
+                   pluscount++
+               }else if(pluscount>0){
                    textView.append(firstinput.toString())
                }
             }
 
             R.id.Minus_btn ->{
-
+                if(minuscount==0){
+                    textView.text="2"
+                    minuscount++
+                }else if(minuscount>0){
+                    textView.append("3")
+                }
             }
             R.id.percent ->{
                 if (Text=="0"){
