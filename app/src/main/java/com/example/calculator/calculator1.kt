@@ -82,10 +82,9 @@ class calculator1 : Fragment(),View.OnClickListener {
                     textView.text = "0"
                    AC_btn.text=getString(R.string.AC)
 
-                }else{
+                } else{
                    textView.append("0")
                     AC_btn.text="C"
-
                 }
             }
             R.id.One_btn ->{
@@ -215,7 +214,8 @@ class calculator1 : Fragment(),View.OnClickListener {
                 //계속 수정하기
                 val firstinput = textView.text.toString().toInt()
                if(pluscount==0){
-                   textView.text="1"
+
+                   textView.text=""
                    pluscount++
                }else if(pluscount>0){
                    textView.append(firstinput.toString())
