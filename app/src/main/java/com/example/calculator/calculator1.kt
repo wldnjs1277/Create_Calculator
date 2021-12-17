@@ -69,8 +69,8 @@ class calculator1 : Fragment(),View.OnClickListener {
     //버튼횟수세기
     var pluscount=0
     var minuscount=0
-    var divisioncount =0
-    var multiplecount =0
+    var divisioncount=0
+    var multiplecount=0
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
@@ -158,6 +158,9 @@ class calculator1 : Fragment(),View.OnClickListener {
                 } else{
                     textView.append("9")
                 }
+                if(Text==""){
+                    textView.text="9"
+                }
             }
             R.id.AC_btn ->{
 
@@ -209,16 +212,16 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.Plus_btn -> {
-                //+버튼을 처음 누를때와 그다음 누를때 다른데 그걸 count로 세고 onclick안에 count를 정의하여 count++을 사용할때는
-                //사용이 되지않아 onclick밖에 정의
-                //계속 수정하기
+                /*버튼을 클릭햇을때 text에 입력된값을 어떻게 받아야 하고
+                받은후 뒤에 다른 버튼입력을 어떻게 해야 할지 모르겠음
+                */
                 val firstinput = textView.text.toString().toInt()
+
                if(pluscount==0){
 
-                   textView.text=""
                    pluscount++
                }else if(pluscount>0){
-                   textView.append(firstinput.toString())
+
                }
             }
 
