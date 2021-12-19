@@ -212,6 +212,7 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.Plus_btn -> {
+
                 /*버튼을 클릭햇을때 text에 입력된값을 어떻게 받아야 하고
                 받은후 뒤에 다른 버튼입력을 어떻게 해야 할지 모르겠음
                 */
