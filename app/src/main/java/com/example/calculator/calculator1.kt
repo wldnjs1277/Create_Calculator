@@ -219,7 +219,6 @@ class calculator1 : Fragment(),View.OnClickListener {
                 val firstinput = textView.text.toString().toInt()
 
                if(pluscount==0){
-
                    pluscount++
                }else if(pluscount>0){
 
