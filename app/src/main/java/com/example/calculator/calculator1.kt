@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_calculator1.*
 import java.text.DecimalFormat
-
+import java.util.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -71,10 +71,15 @@ class calculator1 : Fragment(),View.OnClickListener {
     var minuscount=0
     var divisioncount=0
     var multiplecount=0
+    val stack=Stack<Any>()
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
         val Text_D =Text.toDouble()
-        val dec = DecimalFormat("#,###")//숫자 단위표기를위한
+        /*만들고자 하는 계산기의 기능 숫자를 입력받고 연산자 버튼을 누르면 버튼을 누르기 전에 입력되어있던 숫자는 저장되고
+        * 연산자 후에 숫자를 더입력받고 = 버튼을 누르면 연산결과 출력
+        * =을 안누르고 추가로 연산자 버튼을 눌러 값을 입력 받아도 연산결과 출력
+        * 연산자들에 우선순위가 정해져서 결과가 출력됨
+        * 1+3/3을 하면 나누기 먼저 계산되고 더하기를 수행 */
         when(p0?.id)
         {
             R.id.Zero_btn ->{
@@ -219,6 +224,8 @@ class calculator1 : Fragment(),View.OnClickListener {
                 val firstinput = textView.text.toString().toInt()
 
                if(pluscount==0){
+                   stack.push(firstinput)
+
                    pluscount++
                }else if(pluscount>0){
 
