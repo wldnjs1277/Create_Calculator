@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_calculator1.*
-import java.text.DecimalFormat
 import java.util.*
 
 
@@ -185,18 +184,18 @@ class calculator1 : Fragment(),View.OnClickListener {
             }
             R.id.Divison_btn ->{
                 if(divisioncount==0){
-                    textView.text="4"
+
                     divisioncount++
                 }else if(divisioncount>0){
-                    textView.append("5")
+
                 }
             }
             R.id.Multiplicaton ->{
                 if(multiplecount==0){
-                    textView.text="6"
+
                     multiplecount++
                 }else if(multiplecount>0){
-                    textView.append("7")
+
                 }
             }
             R.id.P_M_btn ->{
@@ -217,10 +216,6 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.Plus_btn -> {
-
-                /*버튼을 클릭햇을때 text에 입력된값을 어떻게 받아야 하고
-                받은후 뒤에 다른 버튼입력을 어떻게 해야 할지 모르겠음
-                */
                 val firstinput = textView.text.toString().toInt()
 
                if(pluscount==0){
@@ -234,10 +229,10 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             R.id.Minus_btn ->{
                 if(minuscount==0){
-                    textView.text="2"
+
                     minuscount++
                 }else if(minuscount>0){
-                    textView.append("3")
+
                 }
             }
             R.id.percent ->{
