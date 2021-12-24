@@ -224,7 +224,6 @@ class calculator1 : Fragment(),View.OnClickListener {
                }else if(pluscount>0){
                    textView.text=stack.pop().toString()
                    //stack.push(firstinput)
-
                }
             }
 
