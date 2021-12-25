@@ -216,6 +216,7 @@ class calculator1 : Fragment(),View.OnClickListener {
 
             }
             R.id.Plus_btn -> {
+
                 val firstinput = textView.text.toString().toInt()
 
                if(pluscount==0){
