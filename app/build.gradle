@@ -9,17 +9,22 @@ plugins {
 android {
     //어떤 sdk버전으로 컴파일할지 지정한다.
     compileSdk 31
-
+    //defaultConfig에는 버전의 기본구성을 할 수 있다.
     defaultConfig {
         applicationId "com.example.calculator"
+        //애플리케이션을 실행하는데 필요한 최소 API 레벨
         minSdk 23
+        //애플리케이션의 대상 API를 지정
         targetSdk 31
+        //버전이 다른 버전보다 최신 버전인지 판단
+        //기본시작은 1 최신버전 일수록 값이 커진다.
         versionCode 1
+        //사용자에게 제공되는 버전 번호
         versionName "1.0"
-
+        //실제 기기 및 에뮬레이터에서 실행되는 테스트
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+        //빌드타입을 지정한다.
     buildTypes {
         release {
             minifyEnabled false
@@ -34,9 +39,8 @@ android {
         jvmTarget = '1.8'
     }
 }
-//
+//종속항목선언
 dependencies {
-    //
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
