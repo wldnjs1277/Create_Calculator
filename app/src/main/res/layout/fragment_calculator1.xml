@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".calculator1">
 
+    <!--dp와 sp의 차이점
+     dp는 고정된 값 일괄적인 크기를 원하면 dp ,sp는 시스템 설정에 따라 크기가 변한다. -->
+
 <!--    레이아웃 배치-->
 
     <LinearLayout
