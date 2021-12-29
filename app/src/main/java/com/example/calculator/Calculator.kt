@@ -1,10 +1,12 @@
-package com.example.calculator.devhyeon.calc
+package com.example.calculator
 
 import java.util.*
 
 
 /* 결과 초기화 */
+//getEmptyStr()의 결과 값은 ""
 fun getEmptyStr() = ""
+//getZeroStr()의 결과 값은 0
 fun getZeroStr() = "0"
 
 /* 숫자 입력 */
