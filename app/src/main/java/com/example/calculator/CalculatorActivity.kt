@@ -1,26 +1,31 @@
-package com.example.calculator.devhyeon.calc
+package com.example.calculator
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculator.databinding.ActivityCalculatorBinding
 
+//AppCompatActivity()를 상속받는 CalculatorActivity class를 정의
 class CalculatorActivity : AppCompatActivity() {
+    //
     private lateinit var binding: ActivityCalculatorBinding
-
+    //expStr=getEmprtyStr()의 결과를 할당한다.
     private var expStr = getEmptyStr()
-
+// oncreate 액티비티가 생성될때
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalculatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        //numberClickListener를 호출
         numberClickListener()
+        //operatorClickListener를 호출
         operatorClickListener()
+        //otherClickListener를 호출
         otherClickListener()
     }
 
     /* 숫자버튼 클릭 리스너 */
     private fun numberClickListener() {
+        //리스트를 생성하고 값을 ()안에 있는 값으로 초기화
         listOf(
             binding.ZeroBtn,
             binding.OneBtn, binding.TwoBtn, binding.ThreeBtn,
