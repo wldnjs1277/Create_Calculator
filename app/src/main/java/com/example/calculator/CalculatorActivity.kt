@@ -6,7 +6,7 @@ import com.example.calculator.databinding.ActivityCalculatorBinding
 
 //AppCompatActivity()를 상속받는 CalculatorActivity class를 정의
 class CalculatorActivity : AppCompatActivity() {
-    //
+    //lateinit을 이용하여 binding: ActivityCalculatorBinding 선언하고 초기화는 나중에 한다.
     private lateinit var binding: ActivityCalculatorBinding
     //expStr=getEmprtyStr()의 결과를 할당한다.
     private var expStr = getEmptyStr()
@@ -14,6 +14,7 @@ class CalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalculatorBinding.inflate(layoutInflater)
+        //화면구성
         setContentView(binding.root)
         //numberClickListener를 호출
         numberClickListener()
@@ -32,6 +33,7 @@ class CalculatorActivity : AppCompatActivity() {
             binding.FourBtn, binding.FiveBtn, binding.SixBtn,
             binding.SevenBtn, binding.EightBtn, binding.NineBtn
         ).forEach { button ->
+            //setOnClickListener 클릭시 수행할동작을 지정한다.
             button.setOnClickListener {
                 binding.textView.text = addNumber(
                     oldNumberStr = binding.textView.text.toString(),
