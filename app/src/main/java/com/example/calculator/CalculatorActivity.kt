@@ -36,6 +36,7 @@ class CalculatorActivity : AppCompatActivity() {
         ).forEach { button ->
             //setOnClickListener 클릭시 수행할동작을 지정한다.
             button.setOnClickListener {
+                //
                 binding.textView.text = addNumber(
                     oldNumberStr = binding.textView.text.toString(),
                     newNumberStr = button.text.toString()
