@@ -33,12 +33,16 @@ class CalculatorActivity : AppCompatActivity() {
             binding.OneBtn, binding.TwoBtn, binding.ThreeBtn,
             binding.FourBtn, binding.FiveBtn, binding.SixBtn,
             binding.SevenBtn, binding.EightBtn, binding.NineBtn
+        //listof.forEach listof에 있는 값을 button으로 받아 반복문 수행
         ).forEach { button ->
             //setOnClickListener 클릭시 수행할동작을 지정한다.
+            //버튼이 클릭되었을때 수행할 동작
             button.setOnClickListener {
-                //
+                //binding.textView.text는 addNumber()의 결과를 할당한다.
                 binding.textView.text = addNumber(
+                    //oldNumberStr은 binding.textView.text.toString() 한 값
                     oldNumberStr = binding.textView.text.toString(),
+                    //newNumberStr은 button.text.toString()한 값
                     newNumberStr = button.text.toString()
                 )
             }
@@ -47,6 +51,7 @@ class CalculatorActivity : AppCompatActivity() {
 
     /* 수식버튼 클릭 리스너 */
     private fun operatorClickListener() {
+        //list를 생성하고 ()의 값으로 초기화
         listOf(
             binding.PlusBtn, binding.MinusBtn, binding.Multiplicaton, binding.DivisonBtn, binding.percent
         ).forEach { button ->
@@ -56,6 +61,7 @@ class CalculatorActivity : AppCompatActivity() {
                     newNumberStr = binding.textView.text.toString(),
                     newOpStr = button.text.toString()
                 )
+                //binding.textView.text는 getZeroStr()결과를 할당
                 binding.textView.text = getZeroStr()
             }
         }
