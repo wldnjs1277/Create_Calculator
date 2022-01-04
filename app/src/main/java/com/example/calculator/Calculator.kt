@@ -10,18 +10,25 @@ fun getEmptyStr() = ""
 fun getZeroStr() = "0"
 
 /* 숫자 입력 */
+//데이터타입이 string인 oldNumberStr 와 newNumberStr를 매개변수로 받고 return 타입이 string인 함수 addNumber()
 fun addNumber(oldNumberStr: String, newNumberStr: String): String {
+    // 조건문 oldNumberStr이 "0"과 같다면 newNumberStr를 반환
     return if (oldNumberStr == "0") {
         newNumberStr
+        //그렇지 않으면 스트링템플릿을 이용하여 oldNumberStr와 newNumberStr 출력
     } else {
         "${oldNumberStr}${newNumberStr}"
     }
 }
 
 /* 수식 입력 */
+/*데이터 타입이 string인 oldExpStr,newNumberStr,newOpStr를 매개변수로 받고
+* newOpStr의 값은"" return타입은string인 addOp함수 */
 fun addOp(oldExpStr:String, newNumberStr:String, newOpStr: String = ""): String {
+    //조건문 newNumberStr을 double로 형변환 한 값이 0.0과 같다면 oldExpStr 반환
     return if (newNumberStr.toDouble()==0.0) {
         oldExpStr
+        //그렇지 않으면 스트링템플릿을 이용하여 oldExpStr,newNumberStr.toDouble(),newOpStr 출력
     } else {
         "${oldExpStr}${newNumberStr.toDouble()}${newOpStr}"
     }
