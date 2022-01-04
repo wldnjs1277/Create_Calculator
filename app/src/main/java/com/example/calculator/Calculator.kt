@@ -10,7 +10,7 @@ fun getEmptyStr() = ""
 fun getZeroStr() = "0"
 
 /* 숫자 입력 */
-//데이터타입이 string인 oldNumberStr 와 newNumberStr를 매개변수로 받고 return 타입이 string인 함수 addNumber()
+//데이터타입이 string인 oldNumberStr 와 newNumberStr를 매개변수로 받고 return 타입이 string인 addNumber함수
 fun addNumber(oldNumberStr: String, newNumberStr: String): String {
     // 조건문 oldNumberStr이 "0"과 같다면 newNumberStr를 반환
     return if (oldNumberStr == "0") {
@@ -35,17 +35,24 @@ fun addOp(oldExpStr:String, newNumberStr:String, newOpStr: String = ""): String 
 }
 
 /* 부호 변경 */
+//데이터 타입이 string인 newNumberStr를 매개변수로 받고 return타입이 string인 changeDataMask함수
 fun changeDataMask(newNumberStr: String): String {
+    //조건문 newNumberStr이 "-"을 포함하고 있으면 newNumberStr.substring을 이용하여 1번째 인덱스 부터 자른 값을 반환
     return if (newNumberStr.contains("-")) {
-        newNumberStr.substring(1)
-    } else {
+        newNumberStr.substring(1) //substring은 코틀린에서 문자열을 잘라서 출력할때 사용
+    }
+    //그렇지 않으면 string템플릿을 이용하여 "-newNumberStr"출력
+    else {
         "-${newNumberStr}"
     }
 }
 /* 소수점 전환 */
+//데이터 타입이 string인 newNumberStr을 매개변수로 받고 return타입이 string인 changeDataPoint함수
 fun changeDataPoint(newNumberStr: String): String {
+    //조건문 newNumberStr이 "." 를 포함하고 있으면 newNumberStr을 반환
     return if (newNumberStr.contains(".")) {
         newNumberStr
+        //그렇지 않으면 string템플릿을 이용하여 "newNumberStr."를 출력
     } else {
         "${newNumberStr}."
     }
@@ -57,7 +64,9 @@ fun percentData() {
 }
 
 /* 계산 */
+//데이터타입이 string인 expStr을 매개변수로 받고 return타입이 string인 getCalcResult 함수
 fun getCalcResult(expStr: String): String {
+    //expStr 이 비어있다면 "0"을 반환
     if (expStr.isEmpty()) {
         return "0"
     }
