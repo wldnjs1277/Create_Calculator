@@ -69,18 +69,23 @@ fun getCalcResult(expStr: String): String {
     //expStr 이 비어있다면 "0"을 반환
     if (expStr.isEmpty()) {
         return "0"
-    }
-    return if (expStr[expStr.length-1].isDigit()) {
+    }//expStr[expStr길이-1]인덱스가 숫자인지 판별하고 expStr을 인자로 받는calcAnswer() 반환
+    return if (expStr[expStr.length-1].isDigit()) { //isDigit 입력받은 문자열이 숫자인지 판별
         calcAnswer(expStr)
+        //그렇지 않으면 expStr을0번부터 expStr-1한 인덱스까지 자른값을 인자로 받는 calcAnswer()반환
     } else {
         calcAnswer(expStr.substring(0, expStr.length-1))
     }
 }
 
 /* 입력된 문자열을 계산하여 반환 */
+//데이터 타입이 String인 expStr을 매개변수로 받고 return타입이 String인 calcAnswer함수
 private fun calcAnswer(expStr: String): String {
+    //infixList는 expStr을 인자로 받는getInfixList() 결과를 할당
     val infixList = getInfixList(expStr)
+    //postfix는 infixList를 인자로 받는 inFixToPostFix 결과를 할당
     val postfix = inFixToPostFix(infixList)
+    //postfix를 인자로 받는 postfixCalc()를 반환
     return postfixCalc(postfix)
 }
 
