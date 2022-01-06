@@ -91,6 +91,7 @@ private fun calcAnswer(expStr: String): String {
 
 
 /* 입력된 문자열(중위표기법)을 숫자와 수식으로 분리하기 */
+//데이터타입이 string인 expStr을 매개변수로 받고 리턴타입이 List<String>인 getInfixList함수
 private fun getInfixList(expStr: String): List<String> {
     val infixList = mutableListOf<String>()
 
