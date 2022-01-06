@@ -93,23 +93,30 @@ private fun calcAnswer(expStr: String): String {
 /* 입력된 문자열(중위표기법)을 숫자와 수식으로 분리하기 */
 //데이터타입이 string인 expStr을 매개변수로 받고 리턴타입이 List<String>인 getInfixList함수
 private fun getInfixList(expStr: String): List<String> {
+    //infixList는 수정이가능한데이터타입이string인리스트를 초기화 한 결과를 할당
     val infixList = mutableListOf<String>()
-
+    //number는 StringBuilder()를 할당
     val number = StringBuilder()
+    //expStr을 공백으로 나누고 나눈것을 반복문 it으로 받고
     expStr.split("").forEach {
         when(it) {
+            //it이 "+", "-", "X", "/" 일때 {}를 수행
             "+", "-", "X", "/" -> {
+                // infixList에 number를 string혀으로 변환한 것을 추가한다
                 infixList.add(number.toString())
+                //
                 number.clear()
+                //infixList에 it을 추가한다
                 infixList.add(it)
             }
+            //그렇지 않으면 number에 it을 추가
             else -> number.append(it)
         }
-    }
+    }//number가 비어있지않다면 /infixList number를string으로 형변환 한 값을 추가
     if (number.isNotEmpty()) {
         infixList.add(number.toString())
     }
-
+    //infixList반환
     return infixList
 }
 
