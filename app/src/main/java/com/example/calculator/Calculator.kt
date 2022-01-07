@@ -104,7 +104,7 @@ private fun getInfixList(expStr: String): List<String> {
             "+", "-", "X", "/" -> {
                 // infixList에 number를 string혀으로 변환한 것을 추가한다
                 infixList.add(number.toString())
-                //
+                //number를 비우고 반환
                 number.clear()
                 //infixList에 it을 추가한다
                 infixList.add(it)
@@ -121,19 +121,25 @@ private fun getInfixList(expStr: String): List<String> {
 }
 
 /* 중위표기법 to 후위표기법 */
+//리스트 타입이 string인 infixList를 매개변수로 받고 리턴타입은 리스트타입이 string인 inFixToPostFix함수
 private fun inFixToPostFix(infixList: List<String>): List<String> {
     //TODO 중위표기법 to 후위표기법
+    //postfixList는 mutableListOf의 타입이 string인 결과를 할당
     val postfixList = mutableListOf<String>()
-
-    val opPriority = hashMapOf<String,Int>().apply {
+    // opPriority는 hashMapOf의<key타입은stringvalue는 Int>apply를 이용하여 {}안의 결과를 할당
+    val opPriority = hashMapOf<String,Int>().apply {//hashMapOf(key와value를 가진다)
+        //hashMapOf의key값이"+"이면 1을 반환
         this["+"] = 1
+        //hashMapOf의key값이"-"이면 1을 반환
         this["-"] = 1
+        //hashMapOf의key값이"X"이면 2를 반환
         this["X"] = 2
+        //hashMapOf의key값이"/"이면 2를 반환
         this["/"] = 2
     }
-
+    //opStack은 데이터타입이String인Stack을 할당
     val opStack = Stack<String>()
-
+    //postfixList를 반환
     return postfixList
 }
 
