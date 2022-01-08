@@ -144,6 +144,7 @@ private fun inFixToPostFix(infixList: List<String>): List<String> {
 }
 
 /* 후위표기법으로 계산하기 */
+// 리스트타입이 string인 tokens을 매개변수로 받고 리턴타입은string인 postfixCalc함수
 private fun postfixCalc(tokens: List<String>): String {
     //TODO 후위표기법으로 계산로직 구현
     var answer = ""
