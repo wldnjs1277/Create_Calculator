@@ -8,8 +8,7 @@ import kotlinx.android.synthetic.main.fragment_calculator1.*
 import java.util.*
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
@@ -19,7 +18,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class calculator1 : Fragment(),View.OnClickListener {
-    // TODO: Rename and change types of parameters
+    //
     private var param1: String? = null
     private var param2: String? = null
 
@@ -65,11 +64,6 @@ class calculator1 : Fragment(),View.OnClickListener {
         //
 
     }
-    //버튼횟수세기
-    var pluscount=0
-    var minuscount=0
-    var divisioncount=0
-    var multiplecount=0
     val stack=Stack<Any>()
     override fun onClick(p0: View?) {
         val Text: String = textView.text.toString()
@@ -174,29 +168,15 @@ class calculator1 : Fragment(),View.OnClickListener {
 
                     //ac버튼을 누르면 카운트도 초기화 시키기
                     if (AC_btn.text.equals("AC")) {
-                        pluscount = 0
-                        minuscount = 0
-                        divisioncount=0
-                        multiplecount=0
                     }
                 }
 
             }
             R.id.Divison_btn ->{
-                if(divisioncount==0){
 
-                    divisioncount++
-                }else if(divisioncount>0){
-
-                }
             }
             R.id.Multiplicaton ->{
-                if(multiplecount==0){
 
-                    multiplecount++
-                }else if(multiplecount>0){
-
-                }
             }
             R.id.P_M_btn ->{
                 if(textView.text.contains(getString(R.string.Minus))){
@@ -217,24 +197,10 @@ class calculator1 : Fragment(),View.OnClickListener {
             }
             R.id.Plus_btn -> {
 
-                val firstinput = textView.text.toString().toInt()
-
-               if(pluscount==0){
-                   stack.push(firstinput)
-                   pluscount++
-               }else if(pluscount>0){
-                   textView.text=stack.pop().toString()
-                   //stack.push(firstinput)
-               }
             }
 
             R.id.Minus_btn ->{
-                if(minuscount==0){
 
-                    minuscount++
-                }else if(minuscount>0){
-
-                }
             }
             R.id.percent ->{
                 if (Text=="0"){
@@ -272,6 +238,7 @@ class calculator1 : Fragment(),View.OnClickListener {
         fun newInstance(param1: String, param2: String) =
             calculator1().apply {
                 arguments = Bundle().apply {
+                    //Bundle의 ARG_PARAM1키에 대한 값을 param1로 변경하여 삽입
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
