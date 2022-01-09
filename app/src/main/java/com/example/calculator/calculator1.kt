@@ -31,13 +31,15 @@ class calculator1 : Fragment(),View.OnClickListener {
     }
 
     override fun onCreateView(
+        //LayoutInflater는xml에 정의된 리소스를 view객체로 반환해주는 역할
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        //inflate(객체화하고픈 xml파일, 객체화한 뷰를 넣을 레이아웃/컨테이너
+
         return inflater.inflate(R.layout.fragment_calculator1, container, false)
     }
-
+    //onViewCreated는 onCreateView가 반환하는 view를 매개변수로 가진다
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //숫자버튼
