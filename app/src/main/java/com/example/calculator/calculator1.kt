@@ -35,7 +35,7 @@ class calculator1 : Fragment(),View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //inflate(객체화하고픈 xml파일, 객체화한 뷰를 넣을 레이아웃/컨테이너
+        //inflate(객체화시킬 xml파일, 객체화한 뷰를 넣을 레이아웃/컨테이너
 
         return inflater.inflate(R.layout.fragment_calculator1, container, false)
     }
