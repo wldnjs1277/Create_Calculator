@@ -95,7 +95,7 @@ private fun calcAnswer(expStr: String): String {
 private fun getInfixList(expStr: String): List<String> {
     //infixList는 수정이가능한데이터타입이string인리스트를 초기화 한 결과를 할당
     val infixList = mutableListOf<String>()
-    //number는 StringBuilder()를 할당
+    //number는 StringBuilder 객체를 할당
     val number = StringBuilder()
     //expStr을 공백으로 나누고 나눈것을 반복문 it으로 받고
     expStr.split("").forEach {
