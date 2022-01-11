@@ -15,13 +15,3 @@ package com.example.calculator
     객체지향언어는 상태와 행위로 이루어진 객체라는 기본다위로 나누고 객체들간의 상호작용을 통해 프로그램을 설계하는 것
     객체지향의 장점으로는 재사용이 용의하다. 생산성이높고 유지보수가 용이하다.
     단점으로는 설계시간이 오래걸리고 실행속도가 느리다.*/
-fun main(){
-    val c = test()
-    println(c.age)
-
-}
-class test(){
-    var name = "aaa"
-    var age=27
-
-}
