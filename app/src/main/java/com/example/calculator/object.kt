@@ -22,4 +22,5 @@ package com.example.calculator
     onCreate() 액티비티가 생성될때 실행됨 필수적으로 구현해야 한다.
     onCreate()메서드는 savedInstanceState를 매개변수로 받고
     savedInstanceState는 활동의 이전 저장 상태가 포함된 Bundle 객체이다. 처음생생된 Bundle객체의 값은 null이다.
+
         */
