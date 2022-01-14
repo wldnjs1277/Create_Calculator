@@ -19,8 +19,16 @@ package com.example.calculator
     ActivityLifeCycle이란?
     앱이 생성되어 실행되고 종료될때 까지의 상태변화를 알려주는 과정
     수명주기 단계 간에 전환을 위해서 onCreate(), onStart(), onResume(), onPause(), onStop(), onDestroy() 6개의 콜백메서드가 존재한다.
-    onCreate() 액티비티가 생성될때 실행됨 필수적으로 구현해야 한다.
-    onCreate()메서드는 savedInstanceState를 매개변수로 받고
+    -onCreate() 액티비티가 생성될때 실행됨 필수적으로 구현해야 한다.
+    -onCreate()메서드는 savedInstanceState를 매개변수로 받고
     savedInstanceState는 활동의 이전 저장 상태가 포함된 Bundle 객체이다. 처음생생된 Bundle객체의 값은 null이다.
-
+    --------------------------
+    -onStart() onCreate()다음 단계 이고 사용자에게 보이기 시작하는단계
+    -onStart() 호출 후 Activity는 onResume()상태로 변경된다.
+    --------------------------
+    -onResume() onStart()다음 단계인 메소드
+    사용자와 상호작용하는 단계이고 Activity에서 포커스가 없어질 때까지 상태가 지속된다.
+    포커스가 사라지면 Activity가 일시정지 상태가 되고 일시정지 상태가 되면 onPause() 메소드가 호출된다.
+    일시정지 상태에서 다시 Activity가 활성화 되면 onResume()이 호출된다.
+    onResume()이 호출되면 Activity가 재개될때 필요한 초기화 작업을 수행한다.
         */
