@@ -25,10 +25,15 @@ package com.example.calculator
     --------------------------
     -onStart() onCreate()다음 단계 이고 사용자에게 보이기 시작하는단계
     -onStart() 호출 후 Activity는 onResume()상태로 변경된다.
+    Activity가 사용자에게 표시되고 앱은 Activity를 포그라운드에 보내 상호작용할 수 있도록 준한다.
     --------------------------
     -onResume() onStart()다음 단계인 메소드
     사용자와 상호작용하는 단계이고 Activity에서 포커스가 없어질 때까지 상태가 지속된다.
+    Activity가 포그라운드에 표시된다.
     포커스가 사라지면 Activity가 일시정지 상태가 되고 일시정지 상태가 되면 onPause() 메소드가 호출된다.
     일시정지 상태에서 다시 Activity가 활성화 되면 onResume()이 호출된다.
     onResume()이 호출되면 Activity가 재개될때 필요한 초기화 작업을 수행한다.
-        */
+    -------------------------
+    -onPause()
+    시스템은 사용자가 Activity를 떠나는 것을 나타내는 첫 번째 신호로 이 메서드를 호출한다.
+    Activity가 포그라운드에 있지 않게 되었다는 것을 나타낸다 */
