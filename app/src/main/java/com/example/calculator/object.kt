@@ -13,7 +13,7 @@ package com.example.calculator
    객체지향이란?
     프로그래밍의 페러다임 중 하나이다.
     객체지향언어는 상태와 행위로 이루어진 객체라는 기본다위로 나누고 객체들간의 상호작용을 통해 프로그램을 설계하는 것
-    객체지향의 장점으로는 재사용이 용의하다. 생산성이높고 유지보수가 용이하다.
+    객체지향의 장점으로는 재사용이 용이하고 생산성이높고 유지보수가 용이하다.
     단점으로는 설계시간이 오래걸리고 실행속도가 느리다.
     -------------------------
     ActivityLifeCycle이란?
@@ -46,4 +46,11 @@ package com.example.calculator
     Activity가 소멸되기 전에 호출된다.
     사용자가 Activity를 완전히 종료해서 onDestroy()가 호출되는 경우
     화면구성이 변경되어 onDestroy()를 호출하는 경우
-    화면구성이 변경되어 onDestroy()를 호출된 경우에는 새로운 Activity가 onCreate()된다. */
+    화면구성이 변경되어 onDestroy()를 호출된 경우에는 새로운 Activity가 onCreate()된다.
+    -------------------------
+    Bundle이란?
+    여러기자 티입의 값을 저장하는 map 클래스이다
+    map클래스는 키와 값을 한 쌍으로 저장하는 방식
+    Bundle의 용도로는 Activity 간의 데이터를 전달하거나 savedInstanceState라는 매개변수를 이용하여 이전상태를 저장한다.
+
+    */
