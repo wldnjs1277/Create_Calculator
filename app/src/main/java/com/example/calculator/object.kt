@@ -36,4 +36,14 @@ package com.example.calculator
     -------------------------
     -onPause()
     시스템은 사용자가 Activity를 떠나는 것을 나타내는 첫 번째 신호로 이 메서드를 호출한다.
-    Activity가 포그라운드에 있지 않게 되었다는 것을 나타낸다 */
+    Activity가 포그라운드에 있지 않게 되었다는 것을 나타낸다
+    -------------------------
+    -onStop()
+    Activity가 사용자에게 더이상 표시 되지 않으면 정지 상태가 되고 onStop() 메서드를 호출 한다.
+    정지상태에서 다시 시작되어 상호작용하거나( onRestart()를 호출 ) 실행을 종료하고 사라진다. ( onDestroy()를 호출 )
+    -------------------------
+    -onDestroy()
+    Activity가 소멸되기 전에 호출된다.
+    사용자가 Activity를 완전히 종료해서 onDestroy()가 호출되는 경우
+    화면구성이 변경되어 onDestroy()를 호출하는 경우
+    화면구성이 변경되어 onDestroy()를 호출된 경우에는 새로운 Activity가 onCreate()된다. */
