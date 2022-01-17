@@ -52,5 +52,36 @@ package com.example.calculator
     여러기자 티입의 값을 저장하는 map 클래스이다
     map클래스는 키와 값을 한 쌍으로 저장하는 방식
     Bundle의 용도로는 Activity 간의 데이터를 전달하거나 savedInstanceState라는 매개변수를 이용하여 이전상태를 저장한다.
-
+    -------------------------
+    Super와 this
+    Super는 상위 클래스의 메서드나 프로퍼티 생성자등 사용하는 키워드
+    this는 현재 클래스의 메서드나 프로퍼티 생성자를 사용하는 키워드
+    -------------------------
+    override
+    부모클래스에 open을 붙여주어야 override 가능하다.
+    override를 하기 위해서는 override를 붙여 줘야 하고 상위 클래스의 함수명 메게변수를 같게 해야 한다.
+    override는 상위 클래스의 메서드를 하위 클래스에서 재정의 하여 사용하는 것을 말한다.
     */
+
+open class test{
+    open fun test1(){
+        println( "test class의 test1")
+    }
+}
+fun main(){
+    val check = test()
+    check.test1()
+    val check2 = test2()
+    check2.test1()
+    check2.test2()
+}
+class test2:test(){
+    override fun test1(){
+        println("test2클래스의 test1")
+    }
+    fun test2(){
+        super.test1()
+    }
+
+
+}
