@@ -68,6 +68,8 @@ package com.example.calculator
     부모클래스에 open을 붙여주어야 override 가능하다.
     override를 하기 위해서는 override를 붙여 줘야 하고 상위 클래스의 함수명 메게변수를 같게 해야 한다.
     override는 상위 클래스의 메서드를 하위 클래스에서 재정의 하여 사용하는 것을 말한다.
+    -------------------------
+    lateinit / bylazy
     */
 
 
