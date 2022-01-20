@@ -70,13 +70,25 @@ package com.example.calculator
     override는 상위 클래스의 메서드를 하위 클래스에서 재정의 하여 사용하는 것을 말한다.
     -------------------------
     lateinit / bylazy
-
+    lateinit 과 bylazy는 둘다 늦은 초기화 - 초기화를 나중에 한다.
+    -lateinit은 var를 사용하여야 한다.
+    초기화를 하지 않고 사용시 오류가 발생한다.
+    null로 초기화 할 수 없다.
+    -------------------------
+    bylazy
+    val을 사용하여야 하고 선언과 동시에 초기화 하여야 한다.
+    val 변수명:데이터 타입 by lazy{
+        초기화 할 값
+    }
+    선언과 동시에 초기화 하지만 늦은 초기화인 이유는 호출시점에 초기화가 되므로 늦은 초기화라고 한다.
     */
 
 
 open class test{
+    lateinit var text:String
     open fun test1(){
-        println( "test class의 test1")
+        text="늦은초기화"
+        println( "test class의 test1"+text)
     }
 }
 fun main(){
@@ -87,8 +99,17 @@ fun main(){
     check2.test2()
 }
 class test2:test(){
+    val text2:String by lazy {
+        println("호출")
+        "by lazy 사용"
+
+    }
+    val text2size:Int by lazy { text2.length }
     override fun test1(){
         println("test2클래스의 test1")
+        println("text2한번호출= $text2")
+        println("text2두번호출= $text2")
+        println(text2size)
     }
     fun test2(){
         super.test1()
