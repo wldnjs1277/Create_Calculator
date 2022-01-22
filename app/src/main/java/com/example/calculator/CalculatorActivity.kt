@@ -12,7 +12,7 @@ class CalculatorActivity : AppCompatActivity() {
     private var expStr = getEmptyStr()
 // oncreate 액티비티가 생성될때
     override fun onCreate(savedInstanceState: Bundle?) {
-        // super를 사용하여 CalculatorActivity에서 구현한 onCreate를 호출하여 사용
+        // super를 사용하여 onCreate 상위 클래스에서 구현한 onCreate를 호출하여 사용
         super.onCreate(savedInstanceState)
         binding = ActivityCalculatorBinding.inflate(layoutInflater)
         //화면구성 binding.root를 표시
