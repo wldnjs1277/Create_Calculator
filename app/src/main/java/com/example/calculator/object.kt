@@ -83,7 +83,6 @@ package com.example.calculator
     선언과 동시에 초기화 하지만 늦은 초기화인 이유는 호출시점에 초기화가 되므로 늦은 초기화라고 한다.
     */
 
-
 open class test{
     lateinit var text:String
     open fun test1(){
