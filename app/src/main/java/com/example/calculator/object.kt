@@ -81,6 +81,8 @@ package com.example.calculator
         초기화 할 값
     }
     선언과 동시에 초기화 하지만 늦은 초기화인 이유는 호출시점에 초기화가 되므로 늦은 초기화라고 한다.
+    lazy가 뭔지 알아보기
+    책오면 책 공부하기
     */
 
 open class test{
